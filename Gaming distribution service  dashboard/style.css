@@ -32,6 +32,13 @@ main {
   display: flex;
   overflow: hidden;
 }
+.dropdown {
+  cursor: pointer;
+  margin: 1rem -1rem 1rem 2rem;
+  font-size: 2rem;
+  display: none;
+  color: #65dfc9;
+}
 
 .circle1,
 .circle2 {
@@ -188,31 +195,29 @@ h3 {
   font-size: 0.8rem;
   margin: 1rem 0rem;
 }
-.progress60,
-.progress20,
-.progress35 {
+.progress {
   max-height: 1rem;
   background-color: rgb(25, 165, 83);
   border-radius: 1rem;
-}
-
-.progress20 {
-  width: 20%;
-  margin-bottom: 2.5rem;
-}
-.progress60 {
   width: 60%;
 }
-.progress35 {
-  width: 35%;
-}
+
 .status {
   display: flex;
 }
 .card {
-  margin: 2rem 0rem;
-  padding: 1vh 0vh;
+  margin: 1rem 0rem;
+  padding: 1rem 1rem;
   font-size: 0.8rem;
+
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
 }
 
 .games img {
@@ -236,15 +241,45 @@ h3 {
   border-radius: 5rem;
 }
 
+.draginfo {
+  display: none;
+  align-items: center;
+  display: flex;
+  margin: 0rem -2rem;
+  padding: 0.7rem 3rem;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.lists {
+  display: none;
+}
+
+@media screen and (max-width: 752px) {
+  .card img {
+    display: block;
+  }
+  .dashboard {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 652px) {
   .card img {
     display: none;
   }
   .progress,
-  .progressbar,
-  .progress20,
-  .progress35,
-  .progress60 {
+  .progressbar {
     max-height: 1rem;
+  }
+
+  .dashboard {
+    display: none;
+  }
+  .dropdown {
+    display: block;
   }
 }
