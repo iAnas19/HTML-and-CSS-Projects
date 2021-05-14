@@ -16,6 +16,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 .glass {
   background: linen;
   min-height: 80vh;
@@ -31,6 +32,7 @@ main {
   backdrop-filter: blur(2rem);
   display: flex;
   overflow: hidden;
+  box-shadow: 0px 4px 10px #42bbb5;
 }
 .dropdown {
   cursor: pointer;
@@ -82,6 +84,7 @@ main {
 .info {
   margin: -0.5rem 0rem;
   font-size: 0.9rem;
+  color: #124c5a;
 }
 .membership {
   margin: 0rem 0rem;
@@ -96,6 +99,7 @@ main {
   align-items: center;
   cursor: pointer;
   font-size: 0.8rem;
+  color: #124c5a;
 }
 .link img {
   max-height: 4vh;
@@ -179,11 +183,12 @@ h3 {
 
 .cards {
   margin-top: 0rem;
+  color: #124c5a;
 }
 .progressbar {
   max-height: 1rem;
-  width: 80%;
-  background: rgb(225, 254, 255);
+  width: 90%;
+  background: #ffffff;
   border-radius: 1rem;
   margin: 0.5rem 0rem;
 }
@@ -255,6 +260,10 @@ h3 {
   display: none;
 }
 
+.search-bar {
+  display: none;
+}
+
 @media screen and (max-width: 752px) {
   .card img {
     display: block;
@@ -265,9 +274,19 @@ h3 {
   .dropdown {
     display: block;
   }
+
+  .lists,
+  .draginfo {
+    display: block;
+    text-shadow: 0px 50px 2px black;
+  }
 }
 
 @media screen and (max-width: 652px) {
+  .status {
+    display: none;
+  }
+
   .card img {
     display: none;
   }
@@ -281,5 +300,73 @@ h3 {
   }
   .dropdown {
     display: block;
+  }
+
+  .search-bar {
+    display: block;
+    /* background: #2f3640; */
+    height: 40px;
+    border-radius: 40px;
+    padding: 0rem 0rem;
+  }
+
+  .search-bar:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+  }
+
+  .search-caja:hover > .search-btn {
+    background: none;
+    color: #65dfc9;
+  }
+
+  .search-btn {
+    color: #e84118;
+    float: right;
+    border-radius: 50%;
+    /* background: #2f3640; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: #65dfc9;
+    cursor: pointer;
+  }
+
+  .search-btn > i {
+    font-size: 1.5rem;
+  }
+
+  .search-txt {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #173c4b;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+  }
+
+  .gamename {
+    font-size: 0.8rem;
+  }
+
+  .progressbar {
+    max-height: 1rem;
+    width: 100%;
+  }
+
+  .games {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .progress,
+  .progressbar {
+    max-height: 0.5rem;
   }
 }
