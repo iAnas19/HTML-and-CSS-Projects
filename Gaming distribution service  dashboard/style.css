@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "calibri", sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass {
+  background: linen;
+  min-height: 80vh;
+  max-height: 95vh;
+  min-width: 65%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  overflow: hidden;
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
+
+.dashboard {
+  max-width: 30%;
+  padding: 0.5rem -0rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+
+.info {
+  margin: -0.5rem 0rem;
+  font-size: 0.9rem;
+}
+.membership {
+  margin: 0rem 0rem;
+  font-size: 0.7rem;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  margin: 0rem -2rem;
+  padding: 0.7rem 3rem;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.link img {
+  max-height: 4vh;
+  padding-left: 1rem;
+}
+.link h3 {
+  padding: 0rem 2rem;
+  text-transform: capitalize;
+}
+
+.games {
+  padding: 2rem;
+  flex: 5;
+}
+.pro {
+  cursor: pointer;
+  margin: -3rem 0.5rem;
+  padding: 1rem 0rem;
+  background: linear-gradient(to left bottom, #65dfc9, #6cdbeb);
+  color: white;
+  border-radius: 1rem;
+  align-items: initial;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.pro img,
+h3 {
+  margin: 0rem 0.5rem;
+  max-width: 10rem;
+  max-height: 5rem;
+}
+
+.user {
+  margin: -3rem 0rem;
+  padding: 0rem;
+}
+
+.active {
+  font-size: 1.5rem;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.search {
+  font: inherit;
+  flex: 1;
+  border: none;
+  margin-top: -0.5rem;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  max-width: 10rem;
+  background: none;
+  /* transition: 0.4s; */
+  /* font-size: 1.2rem; */
+  color: #000000;
+  /* box-shadow: 0px 5px 6px #ccf3f5; */
+}
+
+.search:focus {
+  outline: none;
+}
+.btn {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  background: none;
+  /* background-color: #6cdbeb; */
+  color: #65dfc9;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.9);
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.cards {
+  margin-top: 0rem;
+}
+.progressbar {
+  max-height: 1rem;
+  width: 80%;
+  background: rgb(225, 254, 255);
+  border-radius: 1rem;
+  margin: 0.5rem 0rem;
+}
+
+.percentage {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 1rem 0rem;
+}
+.progress60,
+.progress20,
+.progress35 {
+  max-height: 1rem;
+  background-color: rgb(25, 165, 83);
+  border-radius: 1rem;
+}
+
+.progress20 {
+  width: 20%;
+  margin-bottom: 2.5rem;
+}
+.progress60 {
+  width: 60%;
+}
+.progress35 {
+  width: 35%;
+}
+.status {
+  display: flex;
+}
+.card {
+  margin: 2rem 0rem;
+  padding: 1vh 0vh;
+  font-size: 0.8rem;
+}
+
+.games img {
+  margin: -1vh 0vh;
+}
+
+.card img {
+  margin-right: 0.8rem;
+  max-height: 5rem;
+  float: left;
+}
+.card-info {
+  margin-top: 5rem;
+}
+.gamename {
+  margin: 1.2rem 0rem;
+  float: left;
+}
+.dp {
+  max-height: 5rem;
+  border-radius: 5rem;
+}
+
+@media screen and (max-width: 652px) {
+  .card img {
+    display: none;
+  }
+  .progress,
+  .progressbar,
+  .progress20,
+  .progress35,
+  .progress60 {
+    max-height: 1rem;
+  }
+}
