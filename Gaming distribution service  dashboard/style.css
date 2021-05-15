@@ -34,12 +34,17 @@ main {
   overflow: hidden;
   box-shadow: 0px 4px 10px #42bbb5;
 }
-.dropdown {
+.checkbtn {
   cursor: pointer;
-  margin: 1rem -1rem 1rem 2rem;
+  margin: -27rem -1rem 1rem 2rem;
   font-size: 2rem;
   display: none;
   color: #65dfc9;
+  text-decoration: none;
+}
+
+#check {
+  display: none;
 }
 
 .circle1,
@@ -246,43 +251,80 @@ h3 {
   border-radius: 5rem;
 }
 
-.draginfo {
+.dragbtn {
   display: none;
   align-items: center;
   display: flex;
-  margin: 0rem -2rem;
+  margin: 0rem -3rem;
   padding: 0.7rem 3rem;
   align-items: center;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  text-decoration: none;
 }
-.lists {
+.ul {
   display: none;
+  text-decoration: none;
 }
 
 .search-bar {
   display: none;
 }
 
+ul {
+  display: none;
+}
+
 @media screen and (max-width: 752px) {
+  #check:checked ~ ul {
+    left: 0;
+  }
   .card img {
     display: block;
   }
   .dashboard {
     display: none;
   }
-  .dropdown {
+  .checkbtn {
     display: block;
   }
 
-  .lists,
-  .draginfo {
+  nav {
     display: block;
-    text-shadow: 0px 50px 2px black;
+  }
+
+  ul {
+    padding: 2rem 4rem;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #65dfc9;
+    top: 5rem;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    align-items: left;
+    border-radius: 0.5rem;
+    max-width: 12rem;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0rem;
+    padding: 0rem;
+    align-items: left;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
   }
 }
 
-@media screen and (max-width: 652px) {
+@media screen and (max-width: 600px) {
   .status {
     display: none;
   }
@@ -298,7 +340,7 @@ h3 {
   .dashboard {
     display: none;
   }
-  .dropdown {
+  .checkbtn {
     display: block;
   }
 
