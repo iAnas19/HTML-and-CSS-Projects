@@ -1,0 +1,15 @@
+.clr {
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  background: #fdac14;
+  transition: 0.2s;
+}
+.clr:hover {
+  background: #e69c13;
+}
+.clr:focus {
+  outline: none;
+  transform: scale(0.95);
+}
