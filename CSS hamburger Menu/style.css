@@ -27,6 +27,7 @@ body {
   color: #fff;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .showcase::before {
@@ -37,7 +38,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100rem;
   z-index: -1;
 }
 
@@ -74,4 +75,50 @@ body {
 .btn:hover {
   background-color: var(--primary-color);
   color: #f6f6f6;
+}
+
+.footer {
+  padding: 2rem 4rem;
+  position: relative;
+  display: flex;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2e2e2e;
+  overflow: none;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+}
+.container-tags > ul {
+  padding-bottom: 2rem;
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2e2e2e;
+}
+.container-tags > ul > li {
+  color: white;
+  padding: 0rem 1rem;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.container-tags > ul > li:hover {
+  transform: scale(1.2);
+}
+
+.container-tags > ul > li > a {
+  color: white;
+  text-decoration: none;
 }
